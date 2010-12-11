@@ -1,0 +1,3 @@
+Simple groovy scripts for creating deployment and pom files for jars of an existing webapp.
+
+I use it mainly for creating pom files for opencms [http://www.opencms.org] which contains a lot of dependencies that can't be found in any repositories. A blogpost about it: http://fhopf.blogspot.com/2010/04/playing-with-groovy.html
