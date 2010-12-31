@@ -1,6 +1,11 @@
 package org.synyx.maven
 
-def dir = "/home/flo/projects/libraries/opencms_7.0.3/war/WEB-INF/lib/";
+if (args.length == 0) {
+    println "Missing argument for directory to process";
+    return;
+}
+
+def dir = args[0];
 
 assert dir.endsWith("/");
 

@@ -1,3 +1,13 @@
 Simple groovy scripts for creating deployment and pom files for jars of an existing webapp.
 
 I use it mainly for creating pom files for opencms [http://www.opencms.org] which contains a lot of dependencies that can't be found in any repositories. A blogpost about it: http://fhopf.blogspot.com/2010/04/playing-with-groovy.html
+
+The directory to process needs to be passed to the script as a parameter, e.g. groovy org/synyx/maven/GuessDependencies.groovy /path/to/WEB-INF/lib/
+
+These are the steps to create a deployable project:
+* Guess dependencies from filenames: groovy org/synyx/maven/GuessDependencies.groovy /path/to/WEB-INF/lib/
+* Manually check the created list in /path/to/WEB-INF/lib/dependencies.properties
+* Add project information in /path/to/WEB-INF/lib/project.properties
+* Create the deployable artifacts: groovy org/synyx/maven/CreateDeployment.groovy /path/to/WEB-INF/lib/
+
+The generated script deploy.sh contains the mvn commands to deploy all artifacts. You can edit it and uncomment any artifacts that already are in your repository or on central.
