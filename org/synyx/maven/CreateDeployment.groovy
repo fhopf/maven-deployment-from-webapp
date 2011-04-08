@@ -14,6 +14,7 @@ def pomLocation = dir + "pom.xml";
 def dependencies = [];
 
 new File(dir + "dependencies.properties").splitEachLine("[=|:]") { data ->
+    println "Reading dependency" + data;
     dependencies.add(new Dependency(filename : data[0], groupId : data[1], artifactId : data[2], version : data[3]));
 }
 

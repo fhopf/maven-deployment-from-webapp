@@ -22,6 +22,7 @@ class Pom {
             name(project.artifactId)
             dependencies() {
                 dependencies.each() { dep ->
+		    println "Processing for pom: " + dep.artifactId;
                     dependency {
                         groupId(dep.groupId)
                         artifactId(dep.artifactId)
