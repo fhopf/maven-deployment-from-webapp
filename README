@@ -4,6 +4,8 @@ I use it mainly for creating pom files for opencms [http://www.opencms.org] whic
 
 The directory to process needs to be passed to the script as a parameter, e.g. groovy org/synyx/maven/GuessDependencies.groovy /path/to/WEB-INF/lib/
 
+The scripts seem to have some problems with certain groovy versions, this is a working one: Groovy Version: 1.5.8 JVM: 1.6.0_13
+
 These are the steps to create a deployable project:
 * Guess dependencies from filenames: groovy org/synyx/maven/GuessDependencies.groovy /path/to/WEB-INF/lib/
 * Manually check the created list in /path/to/WEB-INF/lib/dependencies.properties
